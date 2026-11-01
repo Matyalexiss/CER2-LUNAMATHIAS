@@ -1,11 +1,191 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Raleway:wght@400;500;600;700;800&display=swap');
+
+/* --- ESTRUCTURA DE LA PAGINA --- */
+.raleway{
+  font-family: 'Raleway', 'Segoe UI', sans-serif;
+}
+
+.monserrat{
+  font-family: 'Montserrat', 'Segoe UI', sans-serif;
+}
+
+header, main, footer{
+  width: 100%;
+}
+header {
+  padding: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  background-image: url("https://puranoticia.pnt.cl/cms/site/artic/20190524/imag/foto_0000001620190524191336.jpg");
+  background-size: auto;
+  background-position: center;
+  box-shadow: inset 100px 100px 100px 100px rgba(0, 0, 0, 0.3);
+}
+
+main {
+  background-color: #54ca73;
+}
+
+footer {
+  color:#FFFFFF;
+  background-color: #54abca;
+}
+
+.logo {
+  display: block;
+  width: 140px;
+  height: 140px;
+}
+
+.catalogo-foto {
+  width: 500px;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  height: 200px;
+}
+
+.fondo-presentacion {
+  background-color: #b5ffb5;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+.fondo-catalogo {
+  background-color: #b5f4ff;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+#titulo-principal {
+  color: #FFFFFF;
+  font-style: oblique;
   margin: 0;
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  line-height: 1.15;
+  overflow-wrap: anywhere;
 }
 
-header, main, footer {
-  height: 33.3vh;
+#main-nav {
+  min-height: 3.5rem;
+  padding: 0.5rem 1rem;
 }
 
-header { background-color: #54caae; }
-main   { background-color: #5695e7; }
-footer { background-color: #15b63a; }
+#main-nav .navbar-brand {
+  font-size: 1.25rem;
+}
+
+#main-nav .navbar-toggler {
+  padding: 0.25rem 0.75rem;
+  font-size: 1rem;
+}
+
+#main-nav .navbar-toggler-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.centrado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.titulo {
+  font-size: 50px;
+}
+
+#footer {
+  padding: 2rem 1rem 1rem;
+  background-color: #54abca;
+  color: #fff;
+}
+
+#informacion-contacto,
+#explora-patrimonio {
+  background-color: #3d97b8;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+}
+
+#informacion-contacto h2,
+#explora-patrimonio h2 {
+  margin-bottom: 1rem;
+}
+
+#redes-sociales {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+#redes-sociales a {
+  display: inline-flex;
+  width: 2.75rem;
+  height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  color: inherit;
+  font-size: 1.25rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#redes-sociales a:hover,
+#redes-sociales a:focus-visible {
+  background-color: #173847;
+  color: #fff;
+}
+
+#enlace-catalogo-footer {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+#enlace-catalogo-footer:hover,
+#enlace-catalogo-footer:focus {
+  color: #e6f8ff;
+}
+
+#separador-footer-horizontal {
+  width: 80%;
+  margin: 0.75rem auto;
+  border: 0;
+  border-top: 1px solid currentColor;
+  opacity: 0.45;
+}
+
+#separador-footer-vertical {
+  width: 0;
+  height: 75%;
+  min-height: 7rem;
+  margin: auto;
+  border: 0;
+  border-left: 1px solid currentColor;
+  opacity: 0.45;
+}
+
+#copyright-footer {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgb(255 255 255 / 35%);
+  font-size: 0.875rem;
+}
+
+.home-page {
+  min-height: 100vh;
+}
+
+.home-page > .container-fluid {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.home-page #footer {
+  flex: 1;
+  align-content: flex-end;
+}

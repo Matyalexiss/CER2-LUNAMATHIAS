@@ -1,0 +1,80 @@
+{% extends 'core/base.html' %}
+
+{% block title %}{{ accion }} lugar | Fundación Patrimonio Vivo{% endblock %}
+
+{% block content %}
+<div class="container my-4">
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-8">
+            <section class="card shadow-sm">
+                <div class="card-body p-4">
+                    <h2 class="h3 mb-4">{{ accion }} lugar patrimonial</h2>
+
+                    <form method="post">
+                        {% csrf_token %}
+
+                        {% if accion == 'Agregar' %}
+                            <div class="mb-3">
+                                <label for="lugar-id" class="form-label">Identificador</label>
+                                <input type="text" class="form-control" id="lugar-id" name="id"
+                                       maxlength="4" required>
+                                <div class="form-text">Use hasta 4 caracteres.</div>
+                            </div>
+                        {% else %}
+                            <p class="text-secondary">Identificador: {{ lugar.id }}</p>
+                        {% endif %}
+
+                        <div class="mb-3">
+                            <label for="lugar-nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="lugar-nombre" name="nombre"
+                                   maxlength="30" value="{{ lugar.nombre|default:'' }}" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="lugar-descripcion" class="form-label">Descripción</label>
+                            <textarea class="form-control" id="lugar-descripcion" name="descripcion"
+                                      maxlength="100" rows="3" required>{{ lugar.descripcion|default:'' }}</textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="lugar-ubicacion" class="form-label">Ubicación</label>
+                            <input type="text" class="form-control" id="lugar-ubicacion" name="ubicacion"
+                                   maxlength="20" value="{{ lugar.ubicacion|default:'' }}" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="lugar-anio" class="form-label">Año de construcción</label>
+                            <input type="number" class="form-control" id="lugar-anio" name="anio_construccion"
+                                   value="{{ lugar.anio_construccion|default:'' }}" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="lugar-imagen" class="form-label">URL de la imagen</label>
+                            <input type="url" class="form-control" id="lugar-imagen" name="imagen"
+                                   maxlength="500" value="{{ lugar.imagen|default:'' }}" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="lugar-categoria" class="form-label">Categoría</label>
+                            <select class="form-select" id="lugar-categoria" name="categoria" required>
+                                <option value="">Seleccione una categoría</option>
+                                {% for categoria in categorias %}
+                                    <option value="{{ categoria.id }}"
+                                        {% if lugar.categoria_id == categoria.id %}selected{% endif %}>
+                                        {{ categoria.nombre }}
+                                    </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="d-flex flex-wrap gap-2">
+                            <button type="submit" class="btn btn-success">{{ accion }} lugar</button>
+                            <a href="{% url 'catalogo' %}" class="btn btn-outline-secondary">Cancelar</a>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+{% endblock %}

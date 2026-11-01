@@ -8,7 +8,7 @@ class Categoria(models.Model):
     def __str__(self):
         return self.nombre 
 
-class LugarPatrimonial(models.Model):
+class LugarPatrimoniales(models.Model):
     id = models.CharField(max_length=4, primary_key=True) 
     nombre = models.CharField(max_length=30)
     descripcion = models.CharField(max_length=100)
