@@ -59,4 +59,4 @@ Inicie el servidor de desarrollo:
 python manage.py runserver
 ```
 
-Abra <http://127.0.0.1:8000/home/> en el navegador para acceder a la aplicación. Para acceder al panel de administración, abra <http://127.0.0.1:8000/admin/> e inicie sesión con el usuario que creó.
+Abra <http://127.0.0.1:8000/> en el navegador para acceder a la aplicación. Para acceder al panel de administración, abra <http://127.0.0.1:8000/admin/> e inicie sesión con el usuario que creó.
