@@ -45,7 +45,7 @@ def detalle_lugar(request, lugar_id):
     data = {
         'lugar': lugar
     }
-    return render(request, 'core/detalle_lugar.html', data)
+    return render(request, 'core/detalle.html', data)
 
 def logout_view(request):
     logout(request)

@@ -44,6 +44,31 @@ footer {
   height: 200px;
 }
 
+.lugar-card,
+.lugar-detalle {
+  overflow: hidden;
+  border: 0;
+  border-radius: 0.75rem;
+}
+
+.lugar-card-imagen {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center;
+  background-color: #e9ecef;
+}
+
+.lugar-detalle-imagen {
+  display: block;
+  width: 100%;
+  height: clamp(16rem, 40vw, 32rem);
+  object-fit: contain;
+  object-position: center;
+  background-color: #e9ecef;
+}
+
 .fondo-presentacion {
   background-color: #b5ffb5;
   border-radius: 0.5rem;

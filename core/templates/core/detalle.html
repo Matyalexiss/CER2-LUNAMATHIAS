@@ -1,0 +1,21 @@
+{% extends 'core/base.html' %}
+
+{% block title %}{{ lugar.nombre }} | Fundación Patrimonio Vivo{% endblock %}
+
+{% block content %}
+<div class="container my-4">
+    <article class="card shadow-sm lugar-detalle">
+        {% if lugar.imagen %}
+            <img src="{{ lugar.imagen }}" class="card-img-top lugar-detalle-imagen"
+                 alt="{{ lugar.nombre }}" decoding="async">
+        {% endif %}
+        <div class="card-body">
+            <p class="text-muted mb-2">{{ lugar.categoria.nombre }} &bull; {{ lugar.ubicacion }}</p>
+            <h2 class="card-title">{{ lugar.nombre }}</h2>
+            <p class="card-text">{{ lugar.descripcion }}</p>
+            <p class="card-text"><strong>Año de construcción:</strong> {{ lugar.anio_construccion }}</p>
+            <a href="{% url 'catalogo' %}" class="btn btn-outline-primary">Volver al catálogo</a>
+        </div>
+    </article>
+</div>
+{% endblock %}
