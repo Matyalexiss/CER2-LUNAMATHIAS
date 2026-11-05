@@ -12,6 +12,7 @@
         <div class="card-body">
             <p class="text-muted mb-2">{{ lugar.categoria.nombre }} &bull; {{ lugar.ubicacion }}</p>
             <h2 class="card-title">{{ lugar.nombre }}</h2>
+            <p class="card-text mb-2">ID: {{ lugar.id }}</p>
             <p class="card-text">{{ lugar.descripcion }}</p>
             <p class="card-text"><strong>Año de construcción:</strong> {{ lugar.anio_construccion }}</p>
             <a href="{% url 'catalogo' %}" class="btn btn-outline-primary">Volver al catálogo</a>
