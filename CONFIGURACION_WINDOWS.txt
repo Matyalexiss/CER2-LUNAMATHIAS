@@ -1,0 +1,63 @@
+CONFIGURACION INICIAL EN WINDOWS (CMD)
+======================================
+
+Realice estos pasos una vez en cada computadora donde copie el repositorio.
+Abra CMD en la carpeta del proyecto.
+
+1. Cree y active un entorno virtual (opcional, pero recomendado):
+
+   py -m venv .venv
+   .venv\Scripts\activate.bat
+
+2. Instale las dependencias:
+
+   python -m pip install -r requirements.txt
+
+3. Genere una clave secreta nueva:
+
+   py -c "import secrets; print(secrets.token_urlsafe(50))"
+
+   Copie el valor que aparece. Configure su propia clave; no use una clave
+   compartida y no la publique en Git.
+
+4. Guarde la clave y active el modo de desarrollo para su usuario de Windows:
+
+   setx DJANGO_SECRET_KEY "PEGUE_AQUI_SU_CLAVE_GENERADA"
+   setx DJANGO_DEBUG "True"
+
+   Reemplace PEGUE_AQUI_SU_CLAVE_GENERADA por el valor generado en el paso 3.
+   Cierre CMD y abra una ventana nueva para que Windows cargue las variables.
+
+5. En la nueva ventana, vuelva a la carpeta del proyecto y active el entorno
+   virtual si lo creó:
+
+   .venv\Scripts\activate.bat
+
+6. Prepare la base de datos local:
+
+   python manage.py migrate
+   python manage.py loaddata demo_data
+
+   Cargue demo_data solo una vez en una base vacía. Esto agrega seis categorías
+   y siete lugares de demostración.
+
+7. (Opcional) Cree un usuario administrador para el panel de Django:
+
+   python manage.py createsuperuser
+
+   Siga las indicaciones y elija una contraseña propia. No la guarde en el
+   repositorio.
+
+8. Ejecute el servidor:
+
+   python manage.py runserver
+
+   Abra http://127.0.0.1:8000/ en el navegador.
+
+En adelante, para iniciar el servidor en esta computadora, abra CMD, vaya a la
+carpeta del proyecto, active el entorno virtual si corresponde y ejecute:
+
+   python manage.py runserver
+
+La clave se guarda en las variables de entorno de su usuario; no se incluye
+con el repositorio. No use DJANGO_DEBUG=True en un servidor público.

@@ -7,6 +7,9 @@ Aplicación Django para consultar un catálogo de lugares patrimoniales y, con l
 - Python 3.12 o superior.
 - PowerShell en Windows (o una terminal equivalente).
 
+Si usa CMD en Windows, consulte [CONFIGURACION_WINDOWS.txt](./CONFIGURACION_WINDOWS.txt)
+para configurar la clave secreta y preparar la base de datos paso a paso.
+
 ## Instalación
 
 Clone o descargue este repositorio y abra la terminal en su carpeta raíz. Cree y active un entorno virtual:
