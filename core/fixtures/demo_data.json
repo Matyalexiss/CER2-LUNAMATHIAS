@@ -1,0 +1,134 @@
+[
+  {
+    "model": "core.categoria",
+    "pk": 1,
+    "fields": {
+      "nombre": "Arquitectónico",
+      "descripcion": "Edificaciones y obras de valor histórico, artístico o arquitectónico."
+    }
+  },
+  {
+    "model": "core.categoria",
+    "pk": 2,
+    "fields": {
+      "nombre": "Arqueológico",
+      "descripcion": "Sitios, restos y objetos que dan cuenta de culturas del pasado."
+    }
+  },
+  {
+    "model": "core.categoria",
+    "pk": 3,
+    "fields": {
+      "nombre": "Histórico",
+      "descripcion": "Lugares vinculados a acontecimientos o personajes relevantes."
+    }
+  },
+  {
+    "model": "core.categoria",
+    "pk": 4,
+    "fields": {
+      "nombre": "Religioso",
+      "descripcion": "Templos y otros espacios de valor espiritual o religioso."
+    }
+  },
+  {
+    "model": "core.categoria",
+    "pk": 5,
+    "fields": {
+      "nombre": "Natural",
+      "descripcion": "Áreas y elementos naturales de importancia patrimonial."
+    }
+  },
+  {
+    "model": "core.categoria",
+    "pk": 6,
+    "fields": {
+      "nombre": "Industrial",
+      "descripcion": "Instalaciones y estructuras relacionadas con actividades productivas históricas."
+    }
+  },
+  {
+    "model": "core.lugarpatrimoniales",
+    "pk": "N001",
+    "fields": {
+      "nombre": "Parque Vicente Pérez Rosales",
+      "descripcion": "Área protegida de lagos, volcanes y bosques de la Región de Los Lagos.",
+      "ubicacion": "Puerto Varas",
+      "anio_construccion": 1926,
+      "imagen": "https://premagallania.cl/wp-content/uploads/2024/11/Patrimonio-Natural-Region-Los-Lagos-Parque-Vicente-Perez-Rosales.jpg",
+      "categoria": 5
+    }
+  },
+  {
+    "model": "core.lugarpatrimoniales",
+    "pk": "I001",
+    "fields": {
+      "nombre": "Oficina Humberstone",
+      "descripcion": "Antigua oficina salitrera de Tarapacá, reconocida como patrimonio industrial.",
+      "ubicacion": "Pozo Almonte",
+      "anio_construccion": 1872,
+      "imagen": "https://storage.googleapis.com/bkt-chile-travel/2024/05/1c708b30-humberstone.jpg",
+      "categoria": 6
+    }
+  },
+  {
+    "model": "core.lugarpatrimoniales",
+    "pk": "A001",
+    "fields": {
+      "nombre": "Palacio Cousiño",
+      "descripcion": "Residencia histórica destacada por su arquitectura y decoración.",
+      "ubicacion": "Santiago",
+      "anio_construccion": 1870,
+      "imagen": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Fachada_Museo_Palacio_Cousi%C3%B1o_-_A7400591.jpg",
+      "categoria": 1
+    }
+  },
+  {
+    "model": "core.lugarpatrimoniales",
+    "pk": "A002",
+    "fields": {
+      "nombre": "Pukará de Quitor",
+      "descripcion": "Antiguo asentamiento fortificado atacameño cercano a San Pedro de Atacama.",
+      "ubicacion": "San Pedro de Atacama",
+      "anio_construccion": 1100,
+      "imagen": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Pukar%C3%A1_de_Quitor_o_Pucar%C3%A1_de_Quitor_02.JPG",
+      "categoria": 2
+    }
+  },
+  {
+    "model": "core.lugarpatrimoniales",
+    "pk": "H001",
+    "fields": {
+      "nombre": "Fuerte de Niebla",
+      "descripcion": "Fortificación histórica que protegía la entrada a la bahía de Corral.",
+      "ubicacion": "Niebla, Valdivia",
+      "anio_construccion": 1671,
+      "imagen": "https://upload.wikimedia.org/wikipedia/commons/5/50/Fuerte_niebla_valdivia_2024_22.jpg",
+      "categoria": 3
+    }
+  },
+  {
+    "model": "core.lugarpatrimoniales",
+    "pk": "R001",
+    "fields": {
+      "nombre": "Iglesia San Francisco",
+      "descripcion": "Templo chilote de madera, destacado por su arquitectura y valor religioso.",
+      "ubicacion": "Castro",
+      "anio_construccion": 1910,
+      "imagen": "https://upload.wikimedia.org/wikipedia/commons/8/85/0_2662_Castro_Chilo%C3%A9_-_Iglesia_San_Francisco.jpg",
+      "categoria": 4
+    }
+  },
+  {
+    "model": "core.lugarpatrimoniales",
+    "pk": "N002",
+    "fields": {
+      "nombre": "Parque Nacional Conguillío",
+      "descripcion": "Parque de la Araucanía conocido por sus araucarias, bosques, lagos y vistas al volcán Llaima.",
+      "ubicacion": "Melipeuco",
+      "anio_construccion": 1950,
+      "imagen": "https://www.fmdos.cl/wp-content/uploads/2019/05/paruqe-nacionales.jpg",
+      "categoria": 5
+    }
+  }
+]
